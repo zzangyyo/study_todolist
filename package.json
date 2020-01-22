@@ -6,6 +6,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "eslint-config-airbnb": "^18.0.1",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-scripts": "3.3.0"
@@ -17,7 +18,65 @@
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "airbnb",
+    "plugins": [
+      "react-hooks"
+    ],
+    "parser": "babel-eslint",
+    "env": {
+      "browser": true
+    },
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": [
+            "src"
+          ]
+        }
+      }
+    },
+    "rules": {
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "error",
+      "no-console": 0,
+      "no-alert": 0,
+      "camelcase": 0,
+      "react/jsx-filename-extension": 0,
+      "react/jsx-one-expression-per-line": 0,
+      "no-tabs": 0,
+      "indent": [
+        "error",
+        "tab"
+      ],
+      "react/jsx-indent": [
+        4,
+        "tab"
+      ],
+      "react/jsx-indent-props": [
+        4,
+        "tab"
+      ],
+      "no-underscore-dangle": [
+        "error",
+        {
+          "allow": [
+            "__REDUX_DEVTOOLS_EXTENSION__",
+            "__REDUX_DEVTOOLS_EXTENSION_COMPOSE__"
+          ]
+        }
+      ],
+      "no-param-reassign": [
+        "error",
+        {
+          "props": true,
+          "ignorePropertyModificationsFor": [
+            "draft"
+          ]
+        }
+      ],
+      "jsx-a11y/label-has-associated-control": 0,
+      "jsx-a11y/label-has-for": 0
+    }
   },
   "browserslist": {
     "production": [
