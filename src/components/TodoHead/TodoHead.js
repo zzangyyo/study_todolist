@@ -1,8 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const TodoHead = () => {
-	const TodoHeadBlock = styled.div`
+const TodoHeadBlock = styled.div`
 	padding-top: 48px;
 	padding-left: 32px;
 	padding-right: 32px;
@@ -24,8 +23,10 @@ const TodoHead = () => {
 	margin-top: 40px;
 	font-weight: bold;
 	}
-	`;
+`;
 
+const TodoHead = () => {
+	console.log('test');
 	return (
 		<TodoHeadBlock>
 			<h1>2019년 7월 10일</h1>

@@ -3,9 +3,8 @@ import PropTypes from 'prop-types';
 import styled, { css } from 'styled-components';
 import { MdDone, MdDelete } from 'react-icons/md';
 
-const TodoItem = ({ done, text }) => {
-	/* eslint-disable */
-	const Remove = styled.div`
+/* eslint-disable */
+const Remove = styled.div`
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -18,7 +17,7 @@ const TodoItem = ({ done, text }) => {
 		display: none;
 		`;
 
-		const TodoItemBlock = styled.div`
+const TodoItemBlock = styled.div`
 		display: flex;
 		align-items: center;
 		padding-top: 12px;
@@ -30,7 +29,7 @@ const TodoItem = ({ done, text }) => {
 		}
 		`;
 
-		const CheckCircle = styled.div`
+const CheckCircle = styled.div`
 		width: 32px;
 		height: 32px;
 		border-radius: 16px;
@@ -42,24 +41,26 @@ const TodoItem = ({ done, text }) => {
 		margin-right: 20px;
 		cursor: pointer;
 		${props =>
-		props.done &&
-		css`
+	props.done &&
+	css`
 		border: 1px solid #38d9a9;
 		color: #38d9a9;
 		`}
 	`;
 
-	const Text = styled.div`
+const Text = styled.div`
 		flex: 1;
 		font-size: 21px;
 		color: #495057;
 		${props =>
-		props.done &&
-		css`
+	props.done &&
+	css`
 		color: #ced4da;
 		`}
 	`;
-	/* eslint-disable */
+/* eslint-disable */
+
+const TodoItem = ({ done, text }) => {
 	return (
 		<TodoItemBlock>
 			<CheckCircle done={done}>{done && <MdDone/>}</CheckCircle>
@@ -72,12 +73,12 @@ const TodoItem = ({ done, text }) => {
 };
 
 TodoItem.propTypes = {
-	id: PropTypes.number,
+	// id: PropTypes.number,
 	done: PropTypes.bool,
 	text: PropTypes.string,
 };
 TodoItem.defaultProps = {
-	id: null,
+	// id: null,
 	done: null,
 	text: null,
 };
