@@ -19,12 +19,9 @@ const TodoTemplateBlock = styled.div`
 	flex-direction: column;
 `;
 
-const TodoTemplate = ({ children }) => {
-	console.log('test');
-	return (
-		<TodoTemplateBlock>{children}</TodoTemplateBlock>
-	);
-};
+const TodoTemplate = ({ children }) => (
+	<TodoTemplateBlock>{children}</TodoTemplateBlock>
+);
 
 TodoTemplate.propTypes = {
 	children: PropTypes.node,
